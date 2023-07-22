@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+/* Bold font */
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+/* Italic font */
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/AvenirNextLTPro-It.otf') format('opentype');
+}
+
+body {
+  font-family: 'Avenir Next', sans-serif;
+  margin: 0; /* Reset default margin for the body */
+  padding: 0; /* Reset default padding for the body */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: red;
+}
+
+
+.privacy{
+  font-weight: bold;
+}
+
+/* Add space between components */
+.component-container {
+  margin-bottom: 20px;
+}
+
+/* Add minimum margin on both sides */
+.container {
+  margin: 0 5%;
+ 
+}
+.container, main {
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* globals.css */
+
+/* Reset some default styles to ensure consistency across browsers */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Set the base font size and font family for the entire app */
+body {
+  font-size: 16px;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 1.6;
+  color: #333; /* Change to your desired text color */
+  background-color: #f5f5f5; /* Change to your desired background color */
+}
+
+/* Apply margin and padding to the main container to create the desired layout */
+.terms-container {
+  max-width: 60%; /* Change to 90% or 70% or your desired value */
+  margin: 0 15rem;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+/* Add space between each component */
+.terms-container > main > div {
+  margin-bottom: 1.5rem;
+}
+
+/* Apply styles to headings */
+h1, h2, h3, h4, h5, h6 {
+  color: red; /* Change to your desired heading color */
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+  position: relative; 
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after {
+  content: ''; /* Required for the pseudo-element to be visible */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: lightgrey; /* Change to your desired line color */
+  position: absolute;
+  bottom: -8px; /* Adjust the position to move the line up or down as needed */
+  left: 0;
+}
+
+
+/* Add space between paragraphs */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Add styles to unordered lists */
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Add styles to list items */
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Add styles to links */
+a {
+  color: #030303; /* Change to your desired link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 1.5rem;
+ font-weight: bold;
+}
+h2{
+  font-size: 1.2rem;
+ font-weight: bold;
+}
